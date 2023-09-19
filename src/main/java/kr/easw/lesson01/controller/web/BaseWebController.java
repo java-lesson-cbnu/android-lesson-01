@@ -15,7 +15,7 @@ public class BaseWebController {
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView onIndex() {
         if (awsController.isInitialized()) {
-            return new ModelAndView("index.html");
+            return new ModelAndView("data.html");
         }
         return new ModelAndView("request_aws_key.html");
     }
