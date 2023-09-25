@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class BaseWebController {
     private final AWSService awsController;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping("/")
     public ModelAndView onIndex() {
         if (awsController.isInitialized()) {
             return new ModelAndView("data.html");
